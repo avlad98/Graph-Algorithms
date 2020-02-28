@@ -1,0 +1,42 @@
+VLAD ANDREI-ALEXANDRU
+321CB
+
+	README TEMA 2 PA
+
+	Pentru aceasta tema am implementat primul exercitiu.
+	Primul pas este sa deschid fisierele, apoi citesc numarul
+de noduri si construiesc lista de niveluri care contine perechi
+de tipul <nod, distana/nivel>.
+	Dupa aceea o sortez crescator dupa nivel si verific daca
+exista mai mult de un nod pe nivelul 0, caz in care afisez -1.
+	Pornesc cu un nivel curent de la nivelul 0 (nivelul nodului
+radacina) si pentru fiecare nod, in continuare, verific distanta
+intre nivelul curent si nivelul nodului curent.
+	Daca distanta este mai mare decat 1 atunci voi afisa -1 deoarece
+este imposibil sa construiesc graful.
+	Apoi scriu numarul de muchii (n-1) si urmeaza cele n-1 perechi.
+	Pentru fiecare nod, aflu diferenta de nivel intre acesta si cel
+precedent. Daca diferenta este 1, atunci actualizez nivelul curent.
+	Daca nu, atunci afisez distanta si nodul. Daca distanta este 0
+inseamna ca nu m-am mutat pe alt nivel si continui sa completez nivelul
+de sub nodul parinte curent.
+				
+
+	Pentru diferenta de nivel = 0;
+				N1
+				/\
+			N2		N3
+
+	Pentru diferenta de nivel = 1;
+			N1
+			/
+		N2
+			\
+				N3
+
+	Complexitatea spatiala este: O(n)
+	- lista in care salvez inputul
+
+	Complexitatea temporala este: O(n) + O(nlogn) + O(n) + O(n) = O(nlogn)
+	- 3 for-uri sunt O(n)
+	- sortarea: O(nlogn)
